@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duplicate Number Checker</title>
+</head>
+<body>
+    <h1>Enter Numbers</h1>
+    <button onclick="getNumbers()">Start</button>
+
+    <script>
+        function getNumbers() {
+            let numbers = [];
+
+            while (true) {
+                let input = parseInt(prompt("Enter a number:"));
+
+                if (numbers.includes(input)) {
+                    console.log(`The number ${input} has already been given.`);
+                    break;
+                }
+
+                numbers.push(input);
+            }
+
+            numbers.sort((a, b) => a - b);
+
+            console.log("Given numbers in ascending order:");
+            console.log(numbers);
+        }
+    </script>
+</body>
+</html>

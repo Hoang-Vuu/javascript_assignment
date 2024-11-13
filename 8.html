@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenate Array</title>
+</head>
+<body>
+    <h1>Concatenate Array of Strings</h1>
+    <div id="result"></div>
+
+    <script>
+        function concat(arr) {
+            let result = '';
+            for (let i = 0; i < arr.length; i++) {
+                result += arr[i];
+            }
+            return result;
+        }
+
+        const arrayOfStrings = ['Johnny', 'DeeDee', 'Joey', 'Marky'];
+
+        const concatenatedString = concat(arrayOfStrings);
+
+        document.getElementById("result").textContent = concatenatedString;
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even Numbers Filter</title>
+</head>
+<body>
+    <h1>Even Numbers Filter</h1>
+
+    <script>
+        function even(arr) {
+            let evenNumbers = [];
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 === 0) {
+                    evenNumbers.push(arr[i]);
+                }
+            }
+
+            return evenNumbers;
+        }
+
+        const originalArray = [2, 7, 4, 5, 8, 3];
+
+        const evenArray = even(originalArray);
+
+        console.log("Original Array:", originalArray);
+        console.log("Even Numbers Array:", evenArray);
+    </script>
+</body>
+</html>
