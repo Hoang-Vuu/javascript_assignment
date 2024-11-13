@@ -2,29 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Participant List</title>
-</head>
-<body>
-    <h1>Participant List</h1>
-    <button onclick="getParticipants()">Enter Participants</button>
-    <div id="participant-list"></div>
-
+    <title></title>
     <script>
-        function getParticipants() {
-            let numParticipants = parseInt(prompt("Enter the number of participants:"));
-
-            let participants = [];
-
-            for (let i = 0; i < numParticipants; i++) {
-                let name = prompt(`Enter the name of participant ${i + 1}:`);
-                participants.push(name);
-            }
-
-            participants.sort();
-
-            const listContainer = document.getElementById("participant-list");
-            listContainer.innerHTML = "<ol>" + participants.map(name => `<li>${name}</li>`).join('') + "</ol>";
+        function hi() {
+            const name = prompt("What is your name?");
+            document.getElementById("greeting").innerHTML = `Hello, ${name}!`;
         }
     </script>
+</head>
+<body onload="hi()">
+    <h1 id="greeting"></h1>
 </body>
 </html>
